@@ -7,6 +7,28 @@ body
 	font-size: 11px;
 }
 
+ul
+{
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+
+.content
+{
+	margin: 0 10px 0 10px;
+}
+
+.content li
+{
+	padding: 6px;
+	background-color: #374248;
+	color: white;
+	margin: 0 0 10px 0;
+	
+	border-radius: 4px;
+}
+
 .column 
 {
 	float: left;
@@ -28,11 +50,6 @@ body
 	padding: 5px;
 	color: white;
 }	
-
-.events, .actions
-{
-	height: 200px;
-}
 
 .command
 {
