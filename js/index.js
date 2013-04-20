@@ -1,55 +1,73 @@
-YUI().use('node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
-    var serverResponseMockup = [
-        {
-            id: "a-1",
-            status: true
-        },
-        {
-            id: "a-2",
-            status: true
-        },
-        {
-            id: "a-3",
-            status: true
-        },
-        {
-            id: "a-4",
-            status: false
-        },
-        {
-            id: "a-5",
-            status: false
-        },
-        {
-            id: "a-6",
-            status: false
-        },
-        {
-            id: "a-7",
-            status: false
-        },
-        {
-            id: "e-1",
-            status: true
-        },
-        {
-            id: "e-2",
-            status: true
-        },
-        {
-            id: "e-3",
-            status: true
-        },
-        {
-            id: "e-4",
-            status: true
-        },
-        {
-            id: "e-5",
-            status: true
-        }
-    ];
+YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
+	var serverResponseMockup0 = new Array(2);
+	
+	serverResponseMockup0[0] = 
+		'[{"id": "e-1", "status": "true"},' + 
+		 '{"id": "e-2", "status": "true"},' +
+		 '{"id": "e-3", "status": "false"},' +
+		 '{"id": "e-4", "status": "true"},' +
+		 '{"id": "e-5", "status": "true"},' +
+		 '{"id": "a-1", "status": "true"},' +
+		 '{"id": "a-2", "status": "false"},' +
+		 '{"id": "a-3", "status": "true"},' +
+		 '{"id": "a-4", "status": "true"},' +
+		 '{"id": "a-5", "status": "true"},' +
+		 '{"id": "a-6", "status": "true"},' +
+		 '{"id": "a-7", "status": "true"}]';
+			 
+	serverResponseMockup0[1] = 
+		'[{"id": "e-1", "status": "false"},' + 
+		 '{"id": "e-2", "status": "false"},' +
+		 '{"id": "e-3", "status": "false"},' +
+		 '{"id": "e-4", "status": "false"},' +
+		 '{"id": "e-5", "status": "false"},' +
+		 '{"id": "a-1", "status": "false"},' +
+		 '{"id": "a-2", "status": "false"},' +
+		 '{"id": "a-3", "status": "true"},' +
+		 '{"id": "a-4", "status": "true"},' +
+		 '{"id": "a-5", "status": "true"},' +
+		 '{"id": "a-6", "status": "true"},' +
+		 '{"id": "a-7", "status": "true"}]';
+	
+	var j = 0;
+	
+	setInterval(function() 
+	{ 
+		j++;
+		var serverResponseMockup = serverResponseMockup0[j % 2];
+		
+		var data = Y.JSON.parse(serverResponseMockup);
 
+		for (var i = 0; i < data.length; i++)
+		{
+			if(data[i]['status'] === 'true')
+			{
+				//console.log(data[i]['id']);
+				Y.one("[tag=" + data[i]['id'] +  "]").addClass('actionActive');
+			}
+			else
+			{
+				Y.one("[tag=" + data[i]['id'] +  "]").removeClass('actionActive');
+			}
+		}
+		
+	}, 1000);
+	
+	var onClick = function(e) {
+		var data = Y.JSON.parse(serverResponseMockup);
+
+		for (var i = 0; i < data.length; i++)
+		{
+			if(data[i]['status'] === 'true')
+			{
+				console.log(data[i]['id']);
+				Y.one("[tag=" + data[i]['id'] +  "]").addClass('actionActive');
+			}
+		}
+    };
+ 
+    Y.all('#getResponse').on('click', onClick);
+	
     //Listen for all drop:over events
     //Y.DD.DDM._debugShim = true;
 
