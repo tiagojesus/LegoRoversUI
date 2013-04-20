@@ -2,25 +2,6 @@ YUI().use('dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
     //Listen for all drop:over events
     //Y.DD.DDM._debugShim = true;
 
-    Y.DD.DDM.on('drop:over', function(e) {
-        //Get a reference to our drag and drop nodes
-        var drag = e.drag.get('node'),
-            drop = e.drop.get('node');
-
-        //Are we dropping on a li node?
-        if (drop.get('tagName').toLowerCase() === 'li') {
-            //Are we not going up?
-            if (!goingUp) {
-                drop = drop.get('nextSibling');
-            }
-            //Add the node to this list
-            e.drop.get('node').get('parentNode').insertBefore(drag, drop);
-            //Set the new parentScroll on the nodescroll plugin
-            e.drag.nodescroll.set('parentScroll', e.drop.get('node').get('parentNode'));
-            //Resize this nodes shim, so we can drop on it later.
-            e.drop.sizeShim();
-        }
-    });
     //Listen for all drag:drag events
     Y.DD.DDM.on('drag:drag', function(e) {
         //Get the last y point
