@@ -42,6 +42,10 @@ ul
     color: white;
 }
 
+.command-items .event-item, .command-items .action-item {
+    cursor: default;
+}
+
 .column
 {
     float: left;
