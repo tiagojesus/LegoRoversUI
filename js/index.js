@@ -1,4 +1,4 @@
-YUI().use('dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
+YUI().use('node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
     //Listen for all drop:over events
     //Y.DD.DDM._debugShim = true;
 
