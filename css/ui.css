@@ -28,14 +28,19 @@ ul
 	border-radius: 4px;
 }
 
-.listEvents li
+.event-item
 {
 	background-color: #B80300;
 }
 
-.listActions li
+.action-item
 {
 	background-color: #00B82A;
+}
+
+.event-item, .action-item {
+    cursor: move;
+    color: white;
 }
 
 .column 
@@ -64,4 +69,11 @@ ul
 {
 	width: 600px;
 	height: 100px;
+}
+.command-items {
+    height: 30px;
+}
+
+.command-items li {
+    float: left;
 }
