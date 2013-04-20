@@ -46,11 +46,21 @@ YUI().use('node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y
             drag = e.drag.get('node');
 
         //if we are not on an li, we must have been dropped on a ul
-        if (drop.get('tagName').toLowerCase() !== 'li') {
-            if (!drop.contains(drag)) {
-                drop.appendChild(drag);
-                //Set the new parentScroll on the nodescroll plugin
-                e.drag.nodescroll.set('parentScroll', e.drop.get('node'));
+        var lastChild = drop.get('children').slice(-1).item(0);
+        var canAddEvent = true;
+
+        if (lastChild !== null) {
+            canAddEvent = lastChild.hasClass("event-item");
+        }
+
+        if (drop.hasClass('command-items') === true && canAddEvent || drag.hasClass("action-item")) {
+            if (! (lastChild === null && drag.hasClass("action-item"))) {
+                if (!drop.contains(drag)) {
+                    drop.appendChild(drag.cloneNode(true));
+                    //console.log();
+                    //Set the new parentScroll on the nodescroll plugin
+                    e.drag.nodescroll.set('parentScroll', e.drop.get('node'));
+                }
             }
         }
     });
