@@ -1,4 +1,55 @@
 YUI().use('node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
+    var serverResponseMockup = [
+        {
+            id: "a-1",
+            status: true
+        },
+        {
+            id: "a-2",
+            status: true
+        },
+        {
+            id: "a-3",
+            status: true
+        },
+        {
+            id: "a-4",
+            status: false
+        },
+        {
+            id: "a-5",
+            status: false
+        },
+        {
+            id: "a-6",
+            status: false
+        },
+        {
+            id: "a-7",
+            status: false
+        },
+        {
+            id: "e-1",
+            status: true
+        },
+        {
+            id: "e-2",
+            status: true
+        },
+        {
+            id: "e-3",
+            status: true
+        },
+        {
+            id: "e-4",
+            status: true
+        },
+        {
+            id: "e-5",
+            status: true
+        }
+    ];
+
     //Listen for all drop:over events
     //Y.DD.DDM._debugShim = true;
 
