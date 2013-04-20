@@ -23,10 +23,10 @@ YUI().use('node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y
         //Get our drag object
         var drag = e.target;
         //Set some styles here
-        drag.get('node').setStyle('opacity', '.25');
+        drag.get('node').setStyle('opacity', '1');
         drag.get('dragNode').set('innerHTML', drag.get('node').get('innerHTML'));
         drag.get('dragNode').setStyles({
-            opacity: '.5',
+            opacity: '0.5',
             borderColor: drag.get('node').getStyle('borderColor'),
             backgroundColor: drag.get('node').getStyle('backgroundColor')
         });
