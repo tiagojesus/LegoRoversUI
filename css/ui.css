@@ -22,11 +22,20 @@ ul
 .content li
 {
 	padding: 6px;
-	background-color: #374248;
 	color: white;
 	margin: 0 0 10px 0;
 	
 	border-radius: 4px;
+}
+
+.listEvents li
+{
+	background-color: #B80300;
+}
+
+.listActions li
+{
+	background-color: #00B82A;
 }
 
 .column 
@@ -53,5 +62,6 @@ ul
 
 .command
 {
-	height: 412px;
+	width: 600px;
+	height: 100px;
 }
