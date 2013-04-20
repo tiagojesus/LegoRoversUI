@@ -12,7 +12,7 @@ body
 	float: left;
 }
 
-#area
+.area
 {
 	margin: 10px 0 0 10px;
 	width: 200px;
@@ -21,7 +21,7 @@ body
 	border-radius: 5px;
 }
 
-#area #title
+.area .title
 {
 	background-color: #374248;
 	margin: 0 0 10px 0;
