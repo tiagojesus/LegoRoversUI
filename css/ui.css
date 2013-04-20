@@ -1,41 +1,40 @@
 body
 {
-	margin: 0;
-	padding: 0;
-	
-	font-family: Tahoma;
-	font-size: 11px;
+    margin: 0;
+    padding: 0;
+
+    font-family: Tahoma;
+    font-size: 11px;
 }
 
 ul
 {
-	list-style:none;
-	padding: 0;
-	margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .content
 {
-	margin: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
 }
 
 .content li
 {
-	padding: 6px;
-	color: white;
-	margin: 0 0 10px 0;
-	
-	border-radius: 4px;
+    padding: 6px;
+    margin: 0 0 10px 0;
+
+    border-radius: 4px;
 }
 
 .event-item
 {
-	background-color: #B80300;
+    background-color: #B80300;
 }
 
 .action-item
 {
-	background-color: #00B82A;
+    background-color: #00B82A;
 }
 
 .event-item, .action-item {
@@ -43,33 +42,34 @@ ul
     color: white;
 }
 
-.column 
+.column
 {
-	float: left;
+    float: left;
 }
 
 .area
 {
-	margin: 10px 0 0 10px;
-	width: 200px;
-	border: 1px solid black;
-	
-	border-radius: 5px;
+    margin: 10px 0 0 10px;
+    width: 200px;
+    border: 1px solid black;
+
+    border-radius: 5px;
 }
 
 .area .title
 {
-	background-color: #374248;
-	margin: 0 0 10px 0;
-	padding: 5px;
-	color: white;
-}	
+    background-color: #374248;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    color: white;
+}
 
 .command
 {
-	width: 600px;
-	height: 100px;
+    width: 600px;
+    height: 100px;
 }
+
 .command-items {
     height: 30px;
 }
