@@ -26,6 +26,12 @@ ul
     margin: 0 10px 0 10px;
 }
 
+.cam-img
+{
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
 .command li
 {
     padding: 6px;
