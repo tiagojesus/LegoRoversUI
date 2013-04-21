@@ -1,4 +1,4 @@
-YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', function(Y) {
+YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scroll', 'drag', function(Y) {
 	var serverResponseMockup0 = new Array(2);
 	
 	serverResponseMockup0[0] = 
@@ -167,4 +167,15 @@ YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scrol
     });
 
 
+    // the controller code
+    var ddController = new Y.DD.Drag({
+        node: '#inner-pad'
+    }).plug(Y.Plugin.DDConstrained, {
+            constrain2node: '#outter-pad'
+        }
+    );
+
+    ddController.on('drag:end', function(e) {
+        e.preventDefault();
+    });
 });

@@ -119,15 +119,17 @@ ul
 .outter-pad
 {
 	background-image: url('../imgs/outter_pad.png');
-	width: 170px;
-	height: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+	width: 270px;
+	height: 270px;
 }
 
 .inner-pad
 {
-	background-image: url('../imgs/inner_pad.png');
-	width: 166px;
-	height: 166px;
-	
-	margin: auto auto;
+    cursor: pointer;
+    position: relative;
+    top: 65px;
+    left: 40px;
 }
+
