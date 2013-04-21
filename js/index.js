@@ -40,7 +40,7 @@ YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scrol
 
 		for (var i = 0; i < data.length; i++)
 		{
-			if(data[i]['status'] === 'true')
+			if(data[i]['status'] === true)
 			{
 				//console.log(data[i]['id']);
 				Y.one("[tag=" + data[i]['id'] +  "]").addClass('actionActive');
