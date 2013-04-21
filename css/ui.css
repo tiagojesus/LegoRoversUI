@@ -69,6 +69,18 @@ ul
     min-height: 90px;
 }
 
+.command-items-first {
+    background: url('../imgs/assets_icons_new_0001.png');
+}
+
+.command-items-second {
+    background: url('../imgs/assets_icons_new_0003.png');
+}
+
+.command-items-third {
+    background: url('../imgs/assets_icons_new_0005.png');
+}
+
 .command-items {
     height: 45px;
     background-repeat: no-repeat;
@@ -77,6 +89,7 @@ ul
 
 .command-items li {
     float: left;
+    padding: 0;
 }
 
 .actionActive
@@ -84,4 +97,6 @@ ul
 	//background-Color: black;
 }
 
+.command-items .event-item, .command-items .action-item {
+    margin-left: -10px;
 }
