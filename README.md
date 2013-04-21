@@ -1,16 +1,15 @@
-LegoRoversUI
-============
+# LegoRoversUI
 
-This project is solving the Lego Rovers challenge.
+[View the on-line demo](http://tiagojesus.github.io/LegoRoversUI)
 
-A better UI for the Lego Rovers. 
+This project is about solving the Lego Rovers challenge designing a better Graphical User Interface.
 
 <img src='https://securecdn.disqus.com/uploads/mediaembed/images/474/8729/original.jpg'/> 
 
-New ideia
-
+## The inspiring idea
 <img src='https://securecdn.disqus.com/uploads/mediaembed/images/476/8160/original.jpg'/>
 
-Implementation.
 
+
+## Our solution
 <img src='https://github.com/tiagojesus/LegoRoversUI/blob/master/imgs/interface03_wip.jpg?raw=true'/>
