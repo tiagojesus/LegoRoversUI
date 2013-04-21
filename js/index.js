@@ -42,7 +42,6 @@ YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scrol
 		{
 			if(data[i]['status'] === true)
 			{
-				//console.log(data[i]['id']);
 				Y.one("[tag=" + data[i]['id'] +  "]").addClass('actionActive');
 			}
 			else
