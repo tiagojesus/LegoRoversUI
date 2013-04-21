@@ -99,22 +99,41 @@ YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scrol
         var drop = e.drop.get('node'),
             drag = e.drag.get('node');
 
-        //if we are not on an li, we must have been dropped on a ul
-        var lastChild = drop.get('children').slice(-1).item(0);
-        var canAddEvent = true;
+        if (drop.hasClass("command-items")) {
+            //if we are not on an li, we must have been dropped on a ul
+            var lastChild = drop.get('children').slice(-1).item(0);
 
-        if (lastChild !== null) {
-            canAddEvent = lastChild.hasClass("event-item");
-        }
+            var canAdd;
 
-        if (drop.hasClass('command-items') === true && canAddEvent || drag.hasClass("action-item")) {
-            if (! (lastChild === null && drag.hasClass("action-item"))) {
-                if (!drop.contains(drag)) {
-                    drop.appendChild(drag.cloneNode(true));
-                    //console.log();
-                    //Set the new parentScroll on the nodescroll plugin
-                    e.drag.nodescroll.set('parentScroll', e.drop.get('node'));
+            if (drag.hasClass("and")) {
+                if (lastChild === null) {
+                    canAdd = false;
+                } else if (lastChild.hasClass("event-item")) {
+                    canAdd = true;
+                } else {
+                    canAdd = false;
                 }
+            } else if (drag.hasClass("event-item")) {
+                if (lastChild === null) {
+                    canAdd = true;
+                } else if (lastChild.hasClass("action-item")) {
+                    canAdd = false;
+                } else {
+                    canAdd = true;
+                }
+            } else if (drag.hasClass("action-item")) {
+                if (lastChild === null || lastChild.hasClass("and")) {
+                    canAdd = false;
+                } else {
+                    canAdd = true;
+                }
+            } else {
+                canAdd = false;
+            }
+
+            if (canAdd) {
+                drop.appendChild(drag.cloneNode(true));
+                e.drag.nodescroll.set('parentScroll', e.drop.get('node'));
             }
         }
     });
