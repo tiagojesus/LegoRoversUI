@@ -5,6 +5,8 @@ body
 
     font-family: Arial;
     font-size: 12px;
+	
+	background-color: #C4D0F2;
 }
 
 ul
@@ -12,6 +14,11 @@ ul
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+#interface
+{
+	width: 100%;
 }
 
 .content
@@ -39,6 +46,7 @@ ul
 .column
 {
     float: left;
+	width: 30%;
 }
 
 .clear
@@ -46,27 +54,28 @@ ul
     clear: both;
 }
 
-.area
-{
-    margin: 10px 0 0 10px;
-    width: 200px;
-    border: 1px solid black;
-
-    border-radius: 5px;
-}
-
 .area .title
 {
-    background-color: #374248;
+    background-image: url('../imgs/gradient01.jpg');
     margin: 0 0 10px 0;
     padding: 5px;
     color: white;
+	font-weight: bold;
 }
 
 .command
 {
-    width: 600px;
     min-height: 90px;
+}
+
+#target
+{
+	width:70%;
+}
+
+#target li
+{
+	float: left;
 }
 
 .command-items-first {
@@ -99,4 +108,26 @@ ul
 
 .command-items .event-item, .command-items .action-item, .command-items .and {
     margin-left: -10px;
+}
+
+.space
+{
+	clear: both;
+	height: 13px;
+}
+
+.outter-pad
+{
+	background-image: url('../imgs/outter_pad.png');
+	width: 170px;
+	height: 170px;
+}
+
+.inner-pad
+{
+	background-image: url('../imgs/inner_pad.png');
+	width: 166px;
+	height: 166px;
+	
+	margin: auto auto;
 }
