@@ -3,8 +3,8 @@ body
     margin: 0;
     padding: 0;
 
-    font-family: Tahoma;
-    font-size: 11px;
+    font-family: Arial;
+    font-size: 12px;
 }
 
 ul
@@ -19,22 +19,12 @@ ul
     margin: 0 10px 0 10px;
 }
 
-.content li
+.command li
 {
     padding: 6px;
     margin: 0 0 10px 0;
 
     border-radius: 4px;
-}
-
-.event-item
-{
-    background-color: #B80300;
-}
-
-.action-item
-{
-    background-color: #00B82A;
 }
 
 .event-item, .action-item {
@@ -76,7 +66,7 @@ ul
 .command
 {
     width: 600px;
-    min-height: 100px;
+    min-height: 90px;
 }
 
 .command-items {
@@ -89,5 +79,18 @@ ul
 
 .actionActive
 {
-	background-Color: black;
+	//background-Color: black;
+}
+
+.first-element
+{
+	background: url('../imgs/assets_icons_0010.png');
+	color: white;
+	width: 45px;
+	height: 33px;
+}
+
+.first-element .text
+{
+	padding: 8px 10px 10px 15px;
 }

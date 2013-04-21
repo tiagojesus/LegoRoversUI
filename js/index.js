@@ -53,21 +53,6 @@ YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scrol
 		
 	}, 1000);
 	
-	var onClick = function(e) {
-		var data = Y.JSON.parse(serverResponseMockup);
-
-		for (var i = 0; i < data.length; i++)
-		{
-			if(data[i]['status'] === 'true')
-			{
-				console.log(data[i]['id']);
-				Y.one("[tag=" + data[i]['id'] +  "]").addClass('actionActive');
-			}
-		}
-    };
- 
-    Y.all('#getResponse').on('click', onClick);
-	
     //Listen for all drop:over events
     //Y.DD.DDM._debugShim = true;
 
