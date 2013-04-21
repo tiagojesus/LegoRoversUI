@@ -6,7 +6,7 @@ This project is about solving the Lego Rovers challenge designing a better Graph
 
 <img src='https://securecdn.disqus.com/uploads/mediaembed/images/474/8729/original.jpg'/> 
 
-## The inspiring idea
+## The sketch
 <img src='https://securecdn.disqus.com/uploads/mediaembed/images/476/8160/original.jpg'/>
 
 
