@@ -97,6 +97,6 @@ ul
 	//background-Color: black;
 }
 
-.command-items .event-item, .command-items .action-item {
+.command-items .event-item, .command-items .action-item, .command-items .and {
     margin-left: -10px;
 }
