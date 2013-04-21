@@ -70,7 +70,9 @@ ul
 }
 
 .command-items {
-    height: 30px;
+    height: 45px;
+    background-repeat: no-repeat;
+    padding-left: 58px;
 }
 
 .command-items li {
