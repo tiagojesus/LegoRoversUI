@@ -116,7 +116,7 @@ YUI().use('json-parse', 'node', 'dd-constrain', 'dd-proxy', 'dd-drop', 'dd-scrol
             } else if (drag.hasClass("event-item")) {
                 if (lastChild === null) {
                     canAdd = true;
-                } else if (lastChild.hasClass("action-item")) {
+                } else if (lastChild.hasClass("action-item") || lastChild.hasClass("event-item")) {
                     canAdd = false;
                 } else {
                     canAdd = true;
