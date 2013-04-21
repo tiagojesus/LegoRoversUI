@@ -84,15 +84,4 @@ ul
 	//background-Color: black;
 }
 
-.first-element
-{
-	background: url('../imgs/assets_icons_0010.png');
-	color: white;
-	width: 45px;
-	height: 33px;
-}
-
-.first-element .text
-{
-	padding: 8px 10px 10px 15px;
 }
